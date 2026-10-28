@@ -29,7 +29,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             <div className="flex items-baseline gap-1.5">
-              <span className="font-serif text-[15px] leading-none font-medium tracking-tight text-zinc-50">Anamika</span>
+              <span className="font-serif text-[15px] leading-none font-medium tracking-tight text-zinc-50">Veritas</span>
               <span className="text-2xs uppercase tracking-[0.15em] text-subtle">RAG</span>
             </div>
           </Link>
@@ -91,8 +91,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <main className="flex-1 min-w-0">{children}</main>
       <footer className="border-t border-white/[0.06] mt-12">
         <div className="max-w-7xl mx-auto px-6 py-4 text-2xs text-subtle flex items-center justify-between">
-          <span>BM25 + pgvector · reciprocal rank fusion · cross-encoder rerank · citation-grounded generation</span>
-          <span className="font-mono">v1.4.2</span>
+          <span>Veritas RAG Platform · Developed by Anamika Thakur · Hybrid Retrieval & Evaluation System</span>
+          <span className="font-mono">v1.0.0</span>
         </div>
       </footer>
     </div>

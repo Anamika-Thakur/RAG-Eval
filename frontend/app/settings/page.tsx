@@ -100,7 +100,7 @@ export default function SettingsPage() {
           <Row label="Database" value="postgres://rag@…/rag" hint="encrypted at rest · per-tenant row-level isolation">
             <Chip ok>RLS</Chip>
           </Row>
-          <Row label="API token" value="ana_•••••••••••3a1f" hint="exposes /chat and /eval as read-only">
+          <Row label="API token" value="ver_•••••••••••3a1f" hint="exposes /chat and /eval as read-only">
             <button className="font-mono text-2xs text-sienna-300 hover:text-sienna-200">rotate</button>
           </Row>
         </Section>
@@ -110,11 +110,11 @@ export default function SettingsPage() {
           title="Notifications"
           subtitle="Where regressions and eval results land"
         >
-          <Row label="Slack · #rag-evals" value="nightly eval summary + faithfulness drops" hint="fires when any metric drops &gt; 1 pt overnight">
+          <Row label="Slack · #veritas-evals" value="nightly eval summary + faithfulness drops" hint="fires when any metric drops &gt; 1 pt overnight">
             <Chip ok>connected</Chip>
           </Row>
           <Row label="Email digest" value="weekly · Monday 09:00 UTC" hint="metric deltas + top-3 inquiries by token spend" />
-          <Row label="Webhook" value="rag-eval.anamika.ai/webhooks/eval" hint="POST {run_id, metrics, deltas} · HMAC-signed" />
+          <Row label="Webhook" value="https://evals.veritas-ai.internal/webhooks/eval" hint="POST {run_id, metrics, deltas} · HMAC-signed" />
         </Section>
 
       </div>

@@ -30,11 +30,12 @@ async def lifespan(_: FastAPI) -> AsyncIterator[None]:
 
 
 app = FastAPI(
-    title="Anamika RAG-Eval",
+    title="Veritas RAG-Eval",
     version=__version__,
     description=(
-        "Hybrid retrieval (BM25 + pgvector) with reciprocal rank fusion, "
-        "cross-encoder reranking, citation-grounded generation, and an eval harness."
+        "Production-grade hybrid retrieval engine (BM25 + pgvector HNSW) with reciprocal rank fusion, "
+        "cross-encoder reranking, citation-grounded generation, and continuous evaluation harness. "
+        "Engineered by Anamika Thakur."
     ),
     lifespan=lifespan,
     openapi_tags=[

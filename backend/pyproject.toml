@@ -1,7 +1,7 @@
 [project]
-name = "anamika-rag-eval"
+name = "veritas-rag-eval"
 version = "0.1.0"
-description = "Anamika RAG: Production RAG with hybrid retrieval, citations, and evals"
+description = "Veritas RAG: Production hybrid retrieval, citations, and evaluation engine"
 authors = [
     { name = "Anamika Thakur", email = "149621969+Anamika-Thakur@users.noreply.github.com" },
 ]

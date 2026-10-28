@@ -4,16 +4,16 @@ import { AppShell } from "@/components/app-shell";
 
 export const metadata: Metadata = {
   title: {
-    default: "Anamika RAG · Hybrid retrieval with citations & evals",
-    template: "%s · Anamika RAG",
+    default: "Veritas RAG · Grounded Retrieval & Evaluation Engine",
+    template: "%s · Veritas RAG",
   },
-  description: "BM25 + pgvector hybrid retrieval with reciprocal rank fusion, cross-encoder reranking, and citation-grounded generation.",
+  description: "Enterprise hybrid retrieval with BM25, pgvector HNSW, reciprocal rank fusion, and verifiable citation grounding by Anamika Thakur.",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
   openGraph: {
-    title: "Anamika RAG · Hybrid retrieval with citations & evals",
-    description: "BM25 + pgvector hybrid retrieval with reciprocal rank fusion and citation-grounded generation.",
+    title: "Veritas RAG · Grounded Retrieval & Evaluation Engine",
+    description: "Enterprise hybrid retrieval with BM25, pgvector HNSW, reciprocal rank fusion, and verifiable citation grounding by Anamika Thakur.",
     type: "website",
   },
 };
