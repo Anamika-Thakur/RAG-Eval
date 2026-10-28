@@ -19,12 +19,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-20 border-b border-white/[0.06] bg-bg/85 backdrop-blur-xl">
+      <header className="sticky top-0 z-20 border-b border-white/[0.08] bg-bg/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2.5 mr-2 group">
             <div className="relative">
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-sienna-400 to-sienna-600 blur-sm opacity-40 group-hover:opacity-60 transition" />
-              <div className="relative flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-sienna-400 to-sienna-600">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-400 blur-sm opacity-50 group-hover:opacity-80 transition duration-300" />
+              <div className="relative flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 shadow-sm">
                 <FlaskConical className="h-4 w-4 text-white" />
               </div>
             </div>

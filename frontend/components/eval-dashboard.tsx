@@ -85,10 +85,10 @@ export function EvalDashboard() {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <EvalMetric icon={<Target className="h-3.5 w-3.5" />} label="Precision @5"  value={m.precision_at_5} delta={deltaP} color="#c97a4e" />
-        <EvalMetric icon={<Search className="h-3.5 w-3.5" />} label="Recall @5"     value={m.recall_at_5}    delta={deltaR} color="#67c39a" />
-        <EvalMetric icon={<Trophy className="h-3.5 w-3.5" />} label="MRR"            value={m.mrr}            delta={deltaM} color="#b89b6f" />
-        <EvalMetric icon={<ShieldCheck className="h-3.5 w-3.5" />} label="Faithfulness" value={m.faithfulness} delta={deltaF} color="#db8b5f" />
+        <EvalMetric icon={<Target className="h-3.5 w-3.5" />} label="Precision @5"  value={m.precision_at_5} delta={deltaP} color="#6366f1" />
+        <EvalMetric icon={<Search className="h-3.5 w-3.5" />} label="Recall @5"     value={m.recall_at_5}    delta={deltaR} color="#10b981" />
+        <EvalMetric icon={<Trophy className="h-3.5 w-3.5" />} label="MRR"            value={m.mrr}            delta={deltaM} color="#06b6d4" />
+        <EvalMetric icon={<ShieldCheck className="h-3.5 w-3.5" />} label="Faithfulness" value={m.faithfulness} delta={deltaF} color="#8b5cf6" />
       </div>
 
       <Card>
@@ -101,7 +101,7 @@ export function EvalDashboard() {
             <AreaChart data={series} margin={{ top: 8, right: 12, left: -16, bottom: 0 }}>
               <defs>
                 {["P@5", "R@5", "MRR", "Faith"].map((k, i) => {
-                  const c = ["#c97a4e", "#67c39a", "#b89b6f", "#db8b5f"][i];
+                  const c = ["#6366f1", "#10b981", "#06b6d4", "#8b5cf6"][i];
                   return (
                     <linearGradient key={k} id={`g-${k}`} x1="0" y1="0" x2="0" y2="1">
                       <stop offset="0%" stopColor={c} stopOpacity={0.35} />
@@ -110,18 +110,18 @@ export function EvalDashboard() {
                   );
                 })}
               </defs>
-              <CartesianGrid stroke="rgba(245,222,179,0.04)" vertical={false} />
-              <XAxis dataKey="date" stroke="#8a7560" fontSize={11} tickLine={false} axisLine={false} tickMargin={8} />
-              <YAxis stroke="#8a7560" fontSize={11} tickLine={false} axisLine={false} tickMargin={4} width={48} />
+              <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
+              <XAxis dataKey="date" stroke="#64748b" fontSize={11} tickLine={false} axisLine={false} tickMargin={8} />
+              <YAxis stroke="#64748b" fontSize={11} tickLine={false} axisLine={false} tickMargin={4} width={48} />
               <Tooltip
-                contentStyle={{ background: "#221b16", border: "1px solid rgba(245,222,179,0.1)", borderRadius: 8, fontSize: 12, color: "#f0e6d6" }}
-                cursor={{ stroke: "rgba(245,222,179,0.12)", strokeWidth: 1 }}
+                contentStyle={{ background: "#0f172a", border: "1px solid rgba(99,102,241,0.25)", borderRadius: 8, fontSize: 12, color: "#f8fafc" }}
+                cursor={{ stroke: "rgba(99,102,241,0.2)", strokeWidth: 1 }}
               />
               {[
-                { k: "P@5",   c: "#c97a4e" },
-                { k: "R@5",   c: "#67c39a" },
-                { k: "MRR",   c: "#b89b6f" },
-                { k: "Faith", c: "#db8b5f" },
+                { k: "P@5",   c: "#6366f1" },
+                { k: "R@5",   c: "#10b981" },
+                { k: "MRR",   c: "#06b6d4" },
+                { k: "Faith", c: "#8b5cf6" },
               ].map((s) => (
                 <Area key={s.k} type="monotone" dataKey={s.k} stroke={s.c} strokeWidth={2} fill={`url(#g-${s.k})`} isAnimationActive={false} />
               ))}

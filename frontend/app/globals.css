@@ -2,31 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-/* "Research Lab" — Anthropic Console feel: warm dark, serif headings, sienna accents */
+/* "Veritas Engine" — Modern AI Lab: deep obsidian midnight, electric indigo & cyan glassmorphism */
 :root {
   color-scheme: dark;
-  --bg: #1a1410;
-  --surface: #221b16;
-  --surface-2: #2a221c;
-  --paper: #f5efe6;
-  --paper-ink: #2d241d;
-  --border: rgba(245, 222, 179, 0.07);
-  --border-strong: rgba(245, 222, 179, 0.14);
-  --text: #f0e6d6;
-  --muted: #c2a78a;
-  --subtle: #8a7560;
-  --accent: #c97a4e;        /* sienna */
-  --accent-hover: #db8b5f;
-  --accent-soft: rgba(201, 122, 78, 0.16);
-  --emerald: #67c39a;
+  --bg: #090d16;
+  --surface: #0f172a;
+  --surface-2: #1e293b;
+  --paper: #f8fafc;
+  --paper-ink: #0f172a;
+  --border: rgba(148, 163, 184, 0.1);
+  --border-strong: rgba(99, 102, 241, 0.28);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --subtle: #64748b;
+  --accent: #6366f1;        /* electric indigo */
+  --accent-hover: #818cf8;
+  --accent-soft: rgba(99, 102, 241, 0.16);
+  --emerald: #10b981;
+  --cyan: #06b6d4;
+  --violet: #8b5cf6;
 }
 
 html, body {
   height: 100%;
   background: var(--bg);
   background-image:
-    radial-gradient(ellipse 70% 40% at 50% -10%, rgba(201, 122, 78, 0.15), transparent),
-    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(102, 64, 36, 0.12), transparent);
+    radial-gradient(ellipse 75% 45% at 50% -10%, rgba(99, 102, 241, 0.16), transparent),
+    radial-gradient(ellipse 55% 40% at 100% 100%, rgba(14, 165, 233, 0.1), transparent);
   background-attachment: fixed;
   color: var(--text);
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
@@ -40,34 +42,40 @@ html, body {
 }
 
 * { border-color: var(--border); }
-::selection { background: rgba(201, 122, 78, 0.4); color: #fff5e6; }
+::selection { background: rgba(99, 102, 241, 0.45); color: #ffffff; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(245,222,179,0.07); border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(245,222,179,0.14); }
+::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.14); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.24); }
 
-/* Citation markers — superscript footnote style */
+/* Citation markers — futuristic glass footnote badge */
 .citation-marker {
   display: inline-flex;
   align-items: center;
-  height: 1rem;
-  min-width: 1rem;
-  padding: 0 0.3rem;
-  border-radius: 0.25rem;
+  height: 1.15rem;
+  min-width: 1.15rem;
+  padding: 0 0.35rem;
+  border-radius: 0.3rem;
   font-size: 0.6875rem;
   font-weight: 600;
   background: var(--accent-soft);
-  color: var(--accent-hover);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.28);
   cursor: pointer;
-  margin: 0 0.12rem;
+  margin: 0 0.15rem;
   vertical-align: 2px;
   line-height: 1;
-  transition: background 120ms;
+  transition: all 150ms ease;
   font-family: 'Inter', sans-serif;
 }
-.citation-marker:hover { background: rgba(201, 122, 78, 0.32); }
+.citation-marker:hover {
+  background: rgba(99, 102, 241, 0.35);
+  color: #ffffff;
+  border-color: rgba(129, 140, 248, 0.6);
+  transform: translateY(-1px);
+}
 
-/* paper-like cards */
+/* Glassmorphic paper edge */
 .paper-edge {
-  border-image: linear-gradient(180deg, rgba(245,222,179,0.18), rgba(245,222,179,0.04)) 1;
+  border-image: linear-gradient(180deg, rgba(99, 102, 241, 0.3), rgba(99, 102, 241, 0.05)) 1;
 }
